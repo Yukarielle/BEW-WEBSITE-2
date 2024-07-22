@@ -1,0 +1,233 @@
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F8F0E8;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/*hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("photographer.jpg");
+
+  /*Neu für Mobile:*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Höhe Hero Image */
+  /*height: 100vh;*/
+  min-height: 100vh;
+  margin: 0px;
+
+  /* Scaling */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  /*Parallax Werte*/
+  background-attachment: fixed;
+}
+
+/* Text Positionierung und Skalierung */
+.hero-text {
+  text-align: center;
+  font-size: 50px;
+  color: white;
+}
+
+@media screen and (max-width: 600px){
+  .hero-text{
+  font-size: 25px !important;
+  }
+}
+
+/*Button Design. Achtung übergreifend für ALLE Button*/
+
+button{
+  background-color:#F8F0E8;
+	border-radius:15px;
+	border:2px solid #333029;
+	display:inline-block;
+	color:#70A87E;
+	font-size: 18px;
+	font-weight:800;
+	padding:20px 30px;
+  cursor:pointer;
+}
+
+/*ID immer mit #, defintion eines Elements (hier button IN der id Unterlagen immer mit Leerzeichen trennen)*/
+#unterlagen button{
+  background-color:#F8F0E8;
+	border-radius:15px;
+	border:2px solid #333029;
+	display:inline-block;
+	color:#70A87E;
+	font-size: 12px;
+	font-weight:800;
+	padding:10px 20px;
+  cursor:pointer;
+}
+
+#ueber-mich button{
+  background-color:#F8F0E8;
+	border-radius:15px;
+	border:2px solid #333029;
+	display:inline-block;
+	color:#70A87E;
+	font-size: 12px;
+	font-weight:800;
+	padding:10px 20px;
+  cursor:pointer;
+}
+
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+
+button:hover {
+	background-color:#70A87E;
+  color: #F8F0E8;
+}
+button:active {
+	position:relative;
+	top:1px;
+}
+
+/*Menü und Seitendesign*/
+header {
+  background-color: #70A87E;
+  padding: 10px 0;
+  width: 100%;
+  height: auto;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  text-decoration: none;
+  right: 0%;
+  
+}
+
+
+nav{
+  display: flex;
+  justify-content:center;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; 
+}
+
+ul li {
+  margin: 0px 20px;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+ul li a:hover {
+  color: #333029;
+}
+
+/*Mobile Menüansicht*/
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 740px) {
+  .checkbtn {
+    display: block;
+    order: 1;
+    margin-right: 20px;
+  }
+
+  ul {
+    position: fixed;
+    top: 95px;
+    right: -100%;
+    background-color:#70A87E;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+  }
+
+  ul li {
+    margin: 20px 0;
+  }
+
+  ul li a {
+    font-size: 20px;
+  }
+
+  #check:checked ~ ul {
+    right: 0;
+  }
+}
+
+
+
+
+section {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1000px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #70A87E;
+}
+
+
+.lebenslauf{
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  color: #70A87E;
+}
+.lebenslauf:hover{
+  color:#333029;
+}
+
+.unterlagen{
+  text-align: center
+}
+
+footer {
+  text-align: center;
+  padding: 5px;
+  background-color: #70A87E;
+  color: white;
+  /*position: fixed;*/
+  width: 100%;
+  bottom: 0;
+}
